@@ -1,10 +1,14 @@
 ## The 2 functions bellow can be used to cache the inverse of a matrix
-## functions do
 
-## makeCacheMatrix generates a list that creates to properties (like) similar to object oriented programming
+## what the functions do
+
+## makeCacheMatrix generates a list that creates two properties like similar to object oriented programming paradigm
+
+## first property has,
 ##  set the value of the matrix
 ##  get the value of the matrix
 
+## second property has,
 ## setinv, set the value of inverse of the matrix
 ## getinv, get the value of inverse of the matrix  
 
@@ -23,10 +27,10 @@ m <- NULL
 }
 
 ## When cacheSolve function is executed, it does the following
-## verify is the inverse of the matrix had been already calculated and cached inv  property created in makeCacheMatrix)
-## if calculated already than ruturn the cache result
-## if the property is null,IE, the inverse of the matrix was not calculated then is uses the solve function to calculatate the inverse 
-## the inverse is assigned to the inv property (setinv) and return the result
+## verify if the inverse of the matrix had been already calculated and cached into  inv  property inside  makeCacheMatrix)
+## if calculated already than ruturn the cache result using getinv
+## if the property is null,IE, the inverse of the matrix was not calculated then it uses the solve function to calculatate the inverse 
+## the inverse is assigned to the inv property (setinv) and  return the result
 
 
 cacheSolve <- function(x, ...) {
@@ -46,7 +50,8 @@ cacheSolve <- function(x, ...) {
 
 ## important conciderations
 
-## as requested by the instructor the code above do not verify if the matrix is square, if neither the value of it determinent not equal to 0
+## as requested by the instructor the code above do not verify if the matrix is square
+## it  neither verify the value of it determinent (not equal to 0)
 
 
 ## example
@@ -55,7 +60,7 @@ cacheSolve <- function(x, ...) {
 ## x <- matrix(v,2,2) ## make it a matrix 2 by 2 square matrix , if we run det(x), the dterminent of the matrix is not 0, it's inversible
 ## xx <- makeCacheMatrix(x) ## cache the matrix in the property get
 
-## xx$get() ## verification
+## xx$get() ## verification 
 
 ## cacheSolve(xx) ## First time, the inverted matrice is not cached 
 ## cacheSolve(xx) ## second time we notice the print ,getting cached data
